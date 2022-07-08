@@ -1,5 +1,6 @@
 import PageObjectFiles.HomePO;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -33,6 +34,9 @@ public class WithoutLoginTest extends Base {
         rd.getThirdEle().click();
         wait.until(ExpectedConditions.elementToBeClickable(rd.getFirstEle())).click();
         rd.getAddToCart().click();
+
+        Thread.sleep(2000);
+        driver.findElement(By.id("attach-close_sideSheet-link")).click();
         rd.getCart().click();
         Thread.sleep(2000);
         Assert.assertEquals("1",rd.getQuantity().getText());
