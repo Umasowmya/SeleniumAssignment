@@ -82,12 +82,11 @@ public class LoginTest extends Base {
         rd.getAddressBtn().click();
 
         rd.getAddAddressBtn().click();
-        rd.getFullName().sendKeys("Uma Sowmya");
-        rd.getPhoneNumber().sendKeys("9381469574");
-        rd.getPinCode().sendKeys("507001");
-        rd.getFlatNo().sendKeys("8-8-185 ");
-        rd.getStreet().sendKeys("Shukravaripet");
-        rd.getCity().sendKeys("Khammam");
+        rd.getFullName().sendKeys(prop.getProperty("fullName"));
+        rd.getPhoneNumber().sendKeys(prop.getProperty("phoneNo"));
+        rd.getPinCode().sendKeys(prop.getProperty("pinCode"));
+        rd.getFlatNo().sendKeys(prop.getProperty("houseNo"));
+        rd.getStreet().sendKeys(prop.getProperty("street"));
         Select s = new Select(rd.getState());
         s.selectByVisibleText("TELANGANA");
 
@@ -95,7 +94,8 @@ public class LoginTest extends Base {
         js.executeScript("window.scrollBy(0,500)");
 
         rd.getAddressSubmit().click();
-
+        Thread.sleep(2000);
+        Assert.assertEquals("Address saved",driver.findElement(By.xpath("//h4[@class='a-alert-heading']")).getText());
 
     }
 
@@ -116,8 +116,8 @@ public class LoginTest extends Base {
 
         driver.switchTo().frame(driver.findElement(By.className("apx-secure-iframe")));
 
-        rd.getCardNo().sendKeys("4280940012690731");
-        rd.getCardName().sendKeys("Garlapati Uma Sowmya");
+        rd.getCardNo().sendKeys(prop.getProperty("cardNo"));
+        rd.getCardName().sendKeys(prop.getProperty("cardName"));
 
         Select month = new Select(rd.getExpiryMonth());
         month.selectByVisibleText("12");

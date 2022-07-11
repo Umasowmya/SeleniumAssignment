@@ -5,17 +5,14 @@
          <listener class-name="Listeners"/>
  </listeners>
 
-  <test name="Validating without login">
+  <test name="Validating website">
     <classes>
         <class name="WithoutLoginTest"/>
+        <class name="LoginTest"></class>
     </classes>
   </test>
 
-<!--  <test name="Validating with Login">-->
-<!--      <classes>-->
-<!--          <class name="LoginTest"></class>-->
-<!--      </classes>-->
-<!--  </test>-->
+
       
 
    <!-- Test -->
