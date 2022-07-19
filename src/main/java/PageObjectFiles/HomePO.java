@@ -16,11 +16,11 @@ public class HomePO {
     @FindBy(linkText = "Today's Deals")
     WebElement dealsBtn;
 
-    @FindBy(xpath = "//div[@aria-label='Deals grid']//div[3]")
+    @FindBy(xpath = "(//a[@class='a-link-normal'])[3]")
     WebElement thirdEle;
 
 
-    @FindBy(xpath="//ul[@class='a-unordered-list a-nostyle a-horizontal a-spacing-none']//li[2]")
+    @FindBy(xpath ="//ul[@class='a-unordered-list a-nostyle a-horizontal a-spacing-none']//li[2]//div//div//a")
     WebElement firstEle;
 
     @FindBy(id = "add-to-cart-button")
@@ -56,7 +56,7 @@ public class HomePO {
     WebElement accountBtn;
 
 
-    @FindBy(css = ".ya-card-cell")
+    @FindBy(xpath = "(//div[@class='ya-card-cell'])[1]")
     WebElement ordersBtn;
 
 

@@ -7,7 +7,7 @@
 
   <test name="Validating website">
     <classes>
-        <class name="WithoutLoginTest"/>
+<!--        <class name="WithoutLoginTest"/>-->
         <class name="LoginTest"></class>
     </classes>
   </test>

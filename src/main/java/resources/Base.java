@@ -24,7 +24,7 @@ public class Base {
 		  prop.load(fis);
 		  String browserName=prop.getProperty("browser");
 		  if(browserName.equals("chrome")) {
-			  System.setProperty("webdriver.chrome.driver", "/home/umaS/Downloads/chromedriver_linux64/chromedriver");
+			  System.setProperty("webdriver.chrome.driver", "/home/umaS/Documents/chromedriver_linux64/chromedriver");
 			  driver= new ChromeDriver();
 		  }
 
